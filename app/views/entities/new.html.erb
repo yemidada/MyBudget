@@ -1,0 +1,48 @@
+<%= form_with model: @entity, url: entities_path, class: "form" do |f| %>
+   
+  <nav class="navbar navbar-default navbar-expand-lg fixed-top">
+    <div class="container flex justify-content0-between align-items-center">
+
+      <div></div>
+     
+      <h6 class="title">ADD TRANSACTION</h6>
+
+       <div class="header_button">
+       <%= f.submit "Submit" %>
+      </div>
+    </div>
+  </nav>
+
+      <div class="d-flex justify-content-start align-items-center bg-white mav-header">
+
+        <%= link_to :back do  %> 
+          <i class="fa-solid fa-chevron-left icon" ></i>
+        <% end %>
+
+  
+    </div>
+ 
+<section class="auth m-3 shadow-sm">
+
+<% if @entity.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@entity.errors.count, "error") %> prohibited this model from being saved:</h2>
+    <ul>
+      <% @entity.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+   <%= f.hidden_field :group_id, autofocus: true, autocomplete: "group_id" , id:'group_id', placeholder: "Group" %>
+
+  <div class="field">
+    <%= f.text_field :name, autofocus: true, autocomplete: "name" , placeholder: "Name" %>
+  </div>
+
+  <div class="field">
+    <%= f.number_field :amount, autofocus: true, autocomplete: "amount", placeholder: "Amount" %>
+  </div>
+</section>
+<% end %>
