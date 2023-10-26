@@ -24,7 +24,8 @@
 
 
       <% if user_signed_in? %>
-        <li><%= link_to "Home", "/" %></li>
+
+        <li>  <%= link_to "Home", groups_path %></li>
         <li><%= link_to "Logout", "/logout" %></li>
          <% @groups.each do |group|%>
           <li>
