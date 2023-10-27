@@ -99,7 +99,7 @@ C:\> choco install ruby
 <a href="https://mybudget-lf89.onrender.com/">Live Demo Link</a>
 
 ### Video Walkthrogh 
-<a href="https://www.loom.com/share/34d6945226804456a9ff67d036a7c385?sid=ab14925f-4442-4966-8c12-b299bd2e663a">Video Walkthrough</a>
+<a href="https://www.loom.com/share/c0dcc23ee74c468fb10b591d367d904c?sid=1ef67e78-d038-4aa9-9270-92c52b17dbfe">Video Walkthrough</a>
 
 
 ### Setup
@@ -190,7 +190,4 @@ We would like to thank Microverse for proposing this project, and extend our hea
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-=======
-# -MyBudget
- This Ruby on Rails capstone project is about building a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what. 
->>>>>>> e5daa5849636f6518872b9f443a69970514757cb
+
