@@ -1,0 +1,34 @@
+
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+
+  <nav class="navbar navbar-default navbar-expand-lg fixed-top">
+    <div class="container flex justify-content0-between align-items-center">
+
+      <span></span>
+     
+      <h6 class="title">LOGIN</h6>
+
+
+      <div class="header_button">
+        <%= f.submit "Send me" %>
+      </div>
+
+    </div>
+  </nav>
+
+<section class="auth">
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+
+
+
+
+<%= render "devise/shared/links" %>
+  </section>
+<% end %>

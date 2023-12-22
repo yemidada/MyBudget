@@ -1,0 +1,57 @@
+    <nav class="navbar navbar-default navbar-expand-lg fixed-top">
+    <div class="container flex justify-content0-between align-items-center">
+
+      <span></span>
+     
+      <h6 class="title">CATEGORIES</h6>
+
+
+      <div></div>
+
+
+    </div>
+  </nav>
+<div class="d-flex justify-content-between align-items-center bg-white p-2">
+  <h6 class="pt-2">Categories</h6>
+
+  <%= link_to 'Add Category', new_group_path, class: 'btn btn-primary px-3' %>
+</div>
+
+<div class="mb-5">
+
+<% if @groups.empty? %>
+
+    <div class="d-flex flex-column justify-content-center align-items-center m-5">
+
+        <p>Category is empty.</p>
+        <%= link_to 'Add Category', new_group_path, class: 'btn btn-primary px-3' %>
+
+     </div>
+<% else %>
+
+
+ <% @groups.each do |group|%>
+     <%= link_to controller: 'groups', action: 'show', id: group.id do %>
+          <div class="d-flex justify-content-between align-items-center bg-white p-2 gap-6 m-2 shadow-sm" >
+
+            <div class="d-flex justify-content-start align-items-center gap-3">
+              <img src="<%= group.icon %>" height="100" width="100">
+              <div class="flex-column d-flex justify-content-between mt-4">
+                <h6 class="pb-3 text-black-60"><%= group.name.capitalize %></h6>
+                <p class="text-black-50 date-size time"><%= group.created_at.strftime("%Y-%m-%d") %></p>
+              </div>
+            </div>
+            <div class="fw-bold text-black">$<%= group.entities.sum(:amount) %></div>
+        </div>
+      <% end %>
+    <% end %>
+<% end %>
+
+</div>
+  <div class="position-fixed bottom-0 w-100 category-button ">
+    <div class="d-flex justify-content-center align-items-center">
+
+     <%= link_to 'Add Category', new_group_path, class: 'btn w-100 m-2 add-category' %>
+    </div>
+</div>
+
